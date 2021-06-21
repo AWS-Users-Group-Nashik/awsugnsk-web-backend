@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'web_backend.apps.WebBackendConfig',
-    'tinymce'
+    'tinymce',
+    'django_s3_storage',
 ]
 
 MIDDLEWARE = [
@@ -115,8 +116,6 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -132,3 +131,9 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+S3_BUCKET = "zappa-yr73uio1y"
+STATICFILES_STORAGE = "django_s3_storage.storage.StaticS3Storage"
+AWS_S3_BUCKET_NAME_STATIC = S3_BUCKET
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % S3_BUCKET
+STATIC_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
