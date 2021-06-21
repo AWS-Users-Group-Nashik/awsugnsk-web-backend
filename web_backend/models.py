@@ -1,6 +1,8 @@
 from django.db import models
+from tinymce.models import HTMLField
 
 class Events(models.Model):
+    title = models.CharField(max_length=200)
     venue = models.CharField(max_length=200)
     url = models.CharField(max_length=500)
     start_at = models.DateTimeField()
@@ -41,7 +43,7 @@ class Stories(models.Model):
     speaker_name = models.CharField(max_length=200)
     poster_url = models.CharField(max_length=500)
     date = models.DateTimeField()
-    content = models.CharField(max_length=2000)
+    content = HTMLField()
 
     class Meta:
         managed = False

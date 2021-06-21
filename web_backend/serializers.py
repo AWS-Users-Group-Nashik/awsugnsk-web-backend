@@ -6,7 +6,7 @@ class EventsSerializer(ModelSerializer):
     class Meta:
         model = Events
         fields = (
-            'id', 'venue', 'url', 'start_at', 'end_at', 'image_url'
+            'id', 'title', 'venue', 'url', 'start_at', 'end_at', 'image_url'
         )
         
 class LearningsSerializer(ModelSerializer):
