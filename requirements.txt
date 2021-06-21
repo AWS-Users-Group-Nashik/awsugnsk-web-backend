@@ -1,0 +1,5 @@
+djangorestframework
+django-cors-headers
+psycopg2
+zappa
+django-tinymce
