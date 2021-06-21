@@ -1,5 +1,6 @@
-djangorestframework
-django-cors-headers
-psycopg2
-zappa
-django-tinymce
+djangorestframework==3.12.4
+django-cors-headers==3.7.0
+psycopg2==2.9.1
+zappa==0.53.0
+django-tinymce==3.3.0
+django-s3-storage==0.13.4
