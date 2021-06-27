@@ -9,19 +9,19 @@ from .serializers import EventsSerializer, LearningsSerializer, MembersSerialize
 class EventsViewSet(GenericViewSet, CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, ListModelMixin):
       http_method_names = ['get']
       serializer_class = EventsSerializer
-      queryset = Events.objects.all()
+      queryset = Events.objects.all().order_by('-id')
 
 class LearningsViewSet(GenericViewSet, CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, ListModelMixin):
       http_method_names = ['get']
       serializer_class = LearningsSerializer
-      queryset = Learnings.objects.all()
+      queryset = Learnings.objects.all().order_by('-id')
       
 class MembersViewSet(GenericViewSet, CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, ListModelMixin):
       http_method_names = ['get']
       serializer_class = MembersSerializer
-      queryset = Members.objects.all()
+      queryset = Members.objects.all().order_by('id')
       
 class StoriesViewSet(GenericViewSet, CreateModelMixin, RetrieveModelMixin, UpdateModelMixin, ListModelMixin):
       http_method_names = ['get']
       serializer_class = StoriesSerializer
-      queryset = Stories.objects.all()
+      queryset = Stories.objects.all().order_by('-id')
