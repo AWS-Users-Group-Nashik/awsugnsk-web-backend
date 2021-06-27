@@ -1,2 +1,4 @@
 awsugnsk_venv
 *.pyc
+.env
+.vscode
