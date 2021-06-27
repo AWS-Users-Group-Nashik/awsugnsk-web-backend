@@ -1,10 +1,10 @@
 {
-    "dev": {
-        "aws_region": "us-east-1",
+    "production": {
+        "aws_region": "ap-south-1",
         "django_settings": "awsugnsk.settings",
         "profile_name": "default",
-        "project_name": "awsugnsk",
+        "project_name": "awsugnsk-web-backend",
         "runtime": "python3.8",
-        "s3_bucket": "zappa-yr73uio1y"
+        "s3_bucket": "zappa-q3zj4jsid"
     }
 }
