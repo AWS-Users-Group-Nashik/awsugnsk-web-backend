@@ -44,6 +44,7 @@ class Stories(models.Model):
     poster_url = models.CharField(max_length=500)
     date = models.DateTimeField()
     content = HTMLField()
+    preview_image_url = models.CharField(max_length=500)
 
     class Meta:
         managed = False

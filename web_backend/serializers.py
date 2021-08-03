@@ -27,5 +27,5 @@ class StoriesSerializer(ModelSerializer):
     class Meta:
         model = Stories
         fields = (
-            'id', 'title', 'speaker_name', 'poster_url', 'date', 'content'
+            'id', 'title', 'speaker_name', 'poster_url', 'date', 'content', 'preview_image_url'
         )
