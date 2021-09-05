@@ -31,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'ek1tbemoxe.execute-api.ap-south-1.amazonaws.com',
+    'eyc8xur291.execute-api.ap-south-1.amazonaws.com',
     '127.0.0.1'
 ]
 

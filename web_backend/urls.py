@@ -6,10 +6,10 @@ from .views import EventsViewSet, LearningsViewSet, MembersViewSet, StoriesViewS
 from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
-router.register(r'events', EventsViewSet, 'applications')
-router.register(r'learnings', LearningsViewSet, 'custom-tags')
-router.register(r'members', MembersViewSet, 'reply-review-templates')
-router.register(r'stories', StoriesViewSet, 'review-tags')
+router.register(r'events', EventsViewSet, 'events')
+router.register(r'learnings', LearningsViewSet, 'learnings')
+router.register(r'members', MembersViewSet, 'members')
+router.register(r'stories', StoriesViewSet, 'stories')
 
 urlpatterns = [
     re_path('^', include(router.urls)),
